@@ -264,6 +264,11 @@
     .hustle .section-head p { color: #c7cac3; }
     .hustle-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 6vw, 72px); align-items: start; }
     .hustle-copy { font-size: clamp(1.22rem, 2.2vw, 1.75rem); line-height: 1.42; }
+    .award-spotlight { margin-top: clamp(30px, 5vw, 54px); border: 1px solid var(--signal); border-radius: 14px; padding: clamp(26px, 4vw, 44px); background: rgba(233, 185, 73, .06); box-shadow: 0 0 34px -8px rgba(233, 185, 73, .35); text-align: center; }
+    .award-badge { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--signal); color: var(--signal); background: rgba(233, 185, 73, .12); border-radius: 999px; padding: .55rem 1.3rem; font-weight: 800; font-size: .92rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.1rem; }
+    .award-spotlight h3 { margin: 0 0 .8rem; font: 800 clamp(1.9rem, 4vw, 2.9rem)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -.01em; color: var(--deep-ink); }
+    .award-spotlight p { max-width: 760px; margin: 0 auto; color: #c7cac3; font-size: 1.05rem; }
+    .award-spotlight strong { color: var(--signal); }
     .social-panel { border-top: 4px solid var(--signal); }
     .social-row {
       display: flex; justify-content: space-between; gap: 16px; align-items: center;
@@ -406,6 +411,27 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
+  
+    /* ---- Official store banner ---- */
+    .store-banner { background: var(--deep); color: var(--deep-ink); border-top: 1px solid var(--ink); }
+    .store-banner-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 26px; padding: clamp(38px, 5vw, 60px) 0; }
+    .store-banner .label { color: var(--signal); }
+    .store-banner h2 { margin: 0 0 10px; font: 800 clamp(2.1rem, 4.6vw, 3.4rem)/.9 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+    .store-banner-copy p { margin: 0; max-width: 54ch; opacity: .85; }
+
+    /* ---- The Studio Works (blueprint cards) ---- */
+    .studio-works { background: var(--bg); }
+    .works-lede { max-width: 62ch; color: var(--muted); }
+    .works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(20px, 3vw, 32px); margin-top: clamp(28px, 4vw, 44px); }
+    .work-card { position: relative; background: var(--surface); border: 2px dashed var(--ink); padding: clamp(28px, 4vw, 44px); overflow: hidden; transition: border-color .3s ease; }
+    .work-card:hover { border-color: var(--accent); }
+    .work-stamp { position: absolute; top: 20px; right: -34px; transform: rotate(18deg); background: rgba(217, 75, 34, .12); border: 2px solid var(--accent); color: var(--accent); font: 800 .78rem/1 "DM Sans", sans-serif; letter-spacing: .12em; text-transform: uppercase; padding: 8px 42px; white-space: nowrap; }
+    .work-icon { width: 58px; height: 58px; margin-bottom: 18px; stroke: var(--accent); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .work-card h3 { margin: 0 0 12px; font: 800 clamp(1.9rem, 3vw, 2.5rem)/1 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: -.015em; }
+    .work-card .label { margin-bottom: 12px; }
+    .work-card p { margin: 0 0 12px; color: var(--muted); }
+    .work-status { font-weight: 800; color: var(--ink) !important; margin-top: 18px !important; }
+
   </style>
 </head>
 <body>
@@ -456,6 +482,18 @@
         <span>Hip-hop / Rap</span><span>Pop</span><span>Blues</span><span>R&amp;B</span><span>Country</span>
       </div>
     </div>
+
+    
+    <section class="store-banner" aria-labelledby="store-banner-title">
+      <div class="wrap store-banner-inner">
+        <div class="store-banner-copy">
+          <p class="label">Official store</p>
+          <h2 id="store-banner-title">Wear the NOPE mark.</h2>
+          <p>The official Dustinnope store is open — exclusive apparel, drinkware, stickers, pet gear, footwear, and direct drops from the brand.</p>
+        </div>
+        <a class="btn primary" href="https://app.amazecommerce.com/shop/dustinnope" target="_blank" rel="noopener noreferrer">Enter the merch store <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
 
     <section id="music" class="wrap" aria-labelledby="music-title">
       <div class="section-head">
@@ -583,29 +621,51 @@
             <div class="social-row"><strong>Facebook</strong><span>Official link coming soon</span></div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="podcast" class="podcast" aria-labelledby="podcast-title">
-      <div class="wrap">
-        <div class="podcast-panel">
-          <div class="podcast-mark" aria-hidden="true"><span>NOPE<br>Originals</span></div>
-          <div class="podcast-copy">
-            <p class="label">Podcast hub · Coming soon</p>
-            <h2 id="podcast-title">The mic is warming up.</h2>
-            <p>NOPE Originals is an upcoming project. More details will be announced here when the show is ready.</p>
-          </div>
+        <div class="award-spotlight">
+          <span class="award-badge">★ YouTube Gold Creator Award Recipient ★</span>
+          <h3>Redefining the Independent Hustle</h3>
+          <p>Operating under his own <strong>NOPE ENTERTAINMENT</strong> label, Dustinnope has achieved what many artists dream of: total creative autonomy and a massive, dedicated following. With over 1,000,000 subscribers and an official YouTube Gold Creator Award, his influence extends far beyond the recording booth.</p>
         </div>
       </div>
     </section>
 
-    <section id="studio" class="studio" aria-labelledby="studio-title">
-      <div class="studio-panel wrap">
-        <div class="studio-status">Under<br>construction</div>
-        <div class="studio-copy">
-          <p class="label">NOPE Animation Studios</p>
-          <h2 id="studio-title">Stories in motion.</h2>
-          <p>The animation studio section is under construction. Original visual projects will land here as they take shape.</p>
+    <section id="studio-works" class="studio-works" aria-labelledby="studio-works-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="studio-works-title">The<br>studio works</h2>
+          <p class="works-lede">Two new fronts opening up under NOPE ENTERTAINMENT — currently on the drawing board.</p>
+        </div>
+        <div class="works-grid">
+          <article class="work-card" id="studio" aria-labelledby="work-studio-title">
+            <span class="work-stamp" aria-hidden="true">In the works</span>
+            <svg class="work-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+              <line x1="7" y1="2" x2="7" y2="22"></line>
+              <line x1="17" y1="2" x2="17" y2="22"></line>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <line x1="2" y1="7" x2="7" y2="7"></line>
+              <line x1="2" y1="17" x2="7" y2="17"></line>
+              <line x1="17" y1="17" x2="22" y2="17"></line>
+              <line x1="17" y1="7" x2="22" y2="7"></line>
+            </svg>
+            <p class="label">Dustinnope Animation Studios</p>
+            <h3 id="work-studio-title">Stories in motion.</h3>
+            <p>Southern folklore and dark cartoon realism, sketched frame by frame. Storyboard artists are drafting the madness — original visual projects will land here as they take shape.</p>
+            <p class="work-status">Status: currently sketching frame by frame…</p>
+          </article>
+          <article class="work-card" id="podcast" aria-labelledby="work-podcast-title">
+            <span class="work-stamp" aria-hidden="true">Mic check</span>
+            <svg class="work-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <p class="label">Nope Originals Podcast</p>
+            <h3 id="work-podcast-title">The mic is warming up.</h3>
+            <p>Unfiltered stories and behind-the-curtain talk — music, independence, and the creative journey, straight from the source.</p>
+            <p class="work-status">Status: studio levels being dialed in…</p>
+          </article>
         </div>
       </div>
     </section>
