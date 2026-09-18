@@ -223,6 +223,9 @@ nav{
 .proj-card:hover::before{opacity:1;animation:glitchShift .35s steps(2) infinite;}
 @keyframes glitchShift{0%{transform:translateX(0);}50%{transform:translateX(-4px);}100%{transform:translateX(3px);}}
 .proj-card h3{font-size:1.5rem;letter-spacing:.06em;color:#fff;margin-bottom:14px;position:relative;}
+.proj-thumb{border-radius:4px;overflow:hidden;margin-bottom:20px;border:1px solid rgba(255,255,255,.08);}
+.proj-thumb img{display:block;width:100%;height:auto;transition:transform .5s ease;}
+.proj-card:hover .proj-thumb img{transform:scale(1.04);}
 .proj-card:hover h3{text-shadow:2px 0 var(--red),-2px 0 var(--cyan);}
 .proj-status{
   display:inline-block;font-size:.72rem;letter-spacing:.22em;font-weight:700;color:var(--cyan);
@@ -371,6 +374,7 @@ footer .flinks a:hover{color:var(--red);}
   <button id="navToggle" aria-label="Menu">&#9776;</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="#music">[ MUSIC ]</a></li>
+    <li><a href="#store">[ STORE ]</a></li>
     <li><a href="#animation">[ ANIMATION ]</a></li>
     <li><a href="#podcast">[ PODCAST ]</a></li>
     <li><a href="#about">[ ABOUT ]</a></li>
@@ -444,6 +448,36 @@ footer .flinks a:hover{color:var(--red);}
         </div>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ================= NOPE STORE ================= -->
+<section id="store" class="section">
+  <div class="reveal">
+    <span class="badge cyan">[ NOPE STORE ]</span>
+    <h2>WEAR THE <span class="blood">PACK.</span></h2>
+    <p class="lede">Official Dustinnope merch — designed in the bayou, shipped worldwide. The new store HQ is live and fresh drops are landing now.</p>
+  </div>
+  <div class="proj-grid">
+    <article class="proj-card reveal">
+      <div class="proj-thumb"><img src="shoe-slipon-night-swamp.webp" alt="Dustinnope Night Swamp Slip-Ons" loading="lazy"></div>
+      <h3>NIGHT SWAMP SLIP-ONS</h3>
+      <p class="proj-status">$69.99 — Sizes 5–13</p>
+      <div class="platforms">
+        <a class="platform" href="https://shop.dustinnope.com" target="_blank" rel="noopener">SHOP NOW</a>
+      </div>
+    </article>
+    <article class="proj-card reveal">
+      <div class="proj-thumb"><img src="shoe-laceup-night-swamp.webp" alt="Dustinnope Night Swamp Sneakers" loading="lazy"></div>
+      <h3>NIGHT SWAMP SNEAKERS</h3>
+      <p class="proj-status">$69.99 — Sizes 5–13</p>
+      <div class="platforms">
+        <a class="platform" href="https://shop.dustinnope.com" target="_blank" rel="noopener">SHOP NOW</a>
+      </div>
+    </article>
+  </div>
+  <div class="reveal" style="text-align:center;margin-top:2.5rem">
+    <a class="btn btn-primary" href="https://shop.dustinnope.com" target="_blank" rel="noopener">[ ENTER THE FULL STORE ]</a>
   </div>
 </section>
 
