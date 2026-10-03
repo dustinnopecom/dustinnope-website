@@ -152,7 +152,7 @@ nav{
   50%{box-shadow:0 0 34px rgba(255,26,64,.85),inset 0 0 20px rgba(255,26,64,.28);}
 }
 
-/* ================= HERO ================= */
+/* ================= ANNOUNCEMENT BAR ================= */ .announce-bar{   position:fixed;top:0;left:0;right:0;z-index:960;height:38px;   display:flex;align-items:center;justify-content:center;   background:var(--red-deep);color:#fff;   font-weight:700;font-size:.78rem;letter-spacing:.3em;white-space:nowrap;   text-shadow:0 0 8px rgba(0,0,0,.65);   box-shadow:0 0 24px rgba(255,0,51,.55); } .announce-bar:hover{background:var(--red);} nav{top:38px;} section{scroll-margin-top:122px;}  /* ================= ALBUM SPOTLIGHT ================= */ #no-amen-no-mercy{background:linear-gradient(to bottom,var(--void),#0a0a12 50%,var(--void));} .spotlight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px;align-items:center;} .spotlight-cover img{width:100%;height:auto;border:1px solid var(--line);box-shadow:0 0 60px rgba(255,26,64,.3);} .spotlight-sub{color:var(--dim);font-size:1.05rem;line-height:1.8;margin-bottom:24px;} .spotlight-blurb{color:var(--txt);font-size:1.08rem;line-height:1.8;margin-bottom:30px;} .tracklist{list-style:decimal inside;margin:0;padding:0;} .tracklist li{   padding:11px 0;border-bottom:1px solid var(--line);   font-size:1rem;letter-spacing:.03em;color:var(--txt); } .tracklist li::marker{color:var(--red);font-weight:700;} @media(max-width:960px){   .spotlight-grid{grid-template-columns:1fr;gap:36px;} } @media(max-width:768px){   .announce-bar{font-size:.6rem;letter-spacing:.14em;padding:0 10px;} }  /* ================= HERO ================= */
 #hero{
   min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
   background:url('hero-bayou-wolf.png') no-repeat,var(--void);
@@ -342,7 +342,7 @@ footer .flinks a:hover{color:var(--red);}
 }
 </style>
 </head>
-<body>
+<body>  <a class="announce-bar" href="#no-amen-no-mercy">NEW ALBUM // NO AMEN, NO MERCY // OCTOBER 30, 2026</a>
 
 <!-- ================= SPLASH INTRO ================= -->
 <div id="intro" aria-hidden="true">
@@ -390,14 +390,14 @@ footer .flinks a:hover{color:var(--red);}
   </div>
 </section>
 
-<!-- ================= MUSIC ================= -->
+<!-- ================= NO AMEN, NO MERCY — ALBUM SPOTLIGHT ================= --> <section id="no-amen-no-mercy" class="section">   <div class="spotlight-grid reveal">     <div class="spotlight-cover"><img src="no-amen-no-mercy-cover.jpg" alt="No Amen, No Mercy album cover"></div>     <div>       <span class="badge red">[ NEW ALBUM ]</span>       <h2>NO AMEN, <span class="blood">NO MERCY</span></h2>       <p class="spotlight-sub">The new studio album — 10 tracks. Out October 30, 2026.</p>       <p class="spotlight-blurb">Southern gothic gangster rap. Sin, judgment, mercy — straight out the bayou.</p>       <ol class="tracklist">         <li>Vanished in the Thin Air</li>         <li>Rat Trap</li>         <li>Devil in Pulpit</li>         <li>Cell Block Lullaby</li>         <li>Pay The Cost</li>         <li>Bayou Certified</li>         <li>I Was Running To Breathe (Remastered)</li>         <li>Bills Left to Pay</li>         <li>No Amen, No Mercy</li>         <li>Mercy for the Broken</li>       </ol>     </div>   </div> </section>  <!-- ================= MUSIC ================= -->
 <section id="music" class="section">
   <div class="reveal">
     <span class="badge red">[ DISCOGRAPHY ]</span>
     <h2>THE <span class="blood">OUTLAW</span> LEDGER</h2>
     <p class="lede">Every record cut independent. Every master owned outright. Stream the catalog on your platform of choice.</p>
   </div>
-  <div class="disc-grid">
+  <div class="disc-grid">     <article class="disc-card reveal">       <div class="cover"><img src="no-amen-no-mercy-cover.jpg" alt="No Amen, No Mercy album cover"></div>       <div class="disc-body">         <h3>NO AMEN, NO MERCY</h3>         <div class="tag">STUDIO ALBUM — OCT 30, 2026</div>         <div class="platforms">           <a class="platform" href="https://open.spotify.com/search/dustinnope" target="_blank" rel="noopener">SPOTIFY</a>           <a class="platform" href="https://music.apple.com/us/search?term=dustinnope" target="_blank" rel="noopener">APPLE MUSIC</a>           <a class="platform" href="https://www.qobuz.com/us-en/interpreter/dustinnope/23243368" target="_blank" rel="noopener">QOBUZ</a>           <a class="platform" href="https://listen.tidal.com/search?q=dustinnope" target="_blank" rel="noopener">TIDAL</a>           <a class="platform" href="https://www.deezer.com/search/dustinnope" target="_blank" rel="noopener">DEEZER</a>           <a class="platform" href="https://www.pandora.com/search/dustinnope/all" target="_blank" rel="noopener">PANDORA</a>         </div>       </div>     </article>
     <article class="disc-card reveal">
       <div class="cover"><img src="god-mode-cover.jpg" alt="God Mode album cover"></div>
       <div class="disc-body">
