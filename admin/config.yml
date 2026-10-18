@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: dustinnopecom/dustinnope-website
+  branch: main
+media_folder: "assets/img"
+public_folder: "/assets/img"
+collections:
+  - name: "albums"
+    label: "Albums"
+    folder: "_albums"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Kind", name: "kind", widget: "string", default: "STUDIO ALBUM"}
+      - {label: "Release date", name: "date", widget: "string"}
+      - {label: "Explicit", name: "explicit", widget: "boolean", default: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Cover image", name: "image", widget: "image"}
+      - {label: "Tracks", name: "tracks", widget: "list", field: {label: "Track", name: "track", widget: "string"}}
+  - name: "projects"
+    label: "Animation Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Status", name: "status", widget: "string"}
+      - {label: "Logline", name: "logline", widget: "text"}
+      - {label: "Production notes", name: "production", widget: "text"}
+      - {label: "Sound design notes", name: "sound", widget: "text"}
+  - name: "products"
+    label: "Products"
+    folder: "_products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Sizes", name: "sizes", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
