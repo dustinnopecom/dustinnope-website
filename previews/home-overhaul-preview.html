@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DUSTINNOPE — Raw Sound. Relentless Art. | Nope Entertainment</title>
+<meta name="description" content="Dustinnope — Southern gothic gangster rap, independent animation, and unfiltered storytelling out of the Louisiana bayou. NO AMEN, NO MERCY out now. HALO OF SMOKE drops November 6, 2026. Every master, every frame, owned outright.">
+<meta property="og:title" content="DUSTINNOPE — Raw Sound. Relentless Art. | Nope Entertainment">
+<meta property="og:description" content="Music, animation, storytelling. Independent and owned outright. NO AMEN, NO MERCY — out now. HALO OF SMOKE — Nov 6, 2026.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://dustinnope.com/assets/img/no-amen-no-mercy-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root, html[data-theme="dark"]{
+  --bg:#070708; --bg2:#0c0c0e; --surface:#121214; --surface2:#1a1a1d;
+  --line:#232326; --text:#f4f1ea; --muted:#9a958c; --red:#ff2b2b; --red-dk:#c11616; --cyan:#25d0e8;
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+}
+html[data-theme="light"]{
+  --bg:#f4f1ea; --bg2:#ece8df; --surface:#ffffff; --surface2:#f0ece3;
+  --line:#d8d2c6; --text:#141311; --muted:#6f6a61; --red:#d81f1f; --red-dk:#a31212; --cyan:#0e7f96;
+  --shadow:0 18px 40px rgba(20,19,17,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;
+  font-size:16px;line-height:1.65;transition:background .3s,color .3s;overflow-x:hidden}
+html{-webkit-tap-highlight-color:transparent}
+h1,h2,h3,.bebas{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.045em;line-height:.95}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+::selection{background:var(--red);color:#000}
+header.site{position:sticky;top:0;z-index:300;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{font-family:'Bebas Neue';font-size:30px;letter-spacing:.07em;white-space:nowrap}
+.logo em{font-style:normal;color:var(--red)}
+nav.links{display:flex;gap:20px;align-items:center}
+nav.links a{font:600 12px Inter;letter-spacing:.16em;color:var(--muted);padding:6px 2px;border-bottom:2px solid transparent}
+nav.links a:hover{color:var(--cyan)}
+nav.links a.active{color:var(--red);border-color:var(--red)}
+.hdr-right{display:flex;gap:10px;align-items:center}
+.themebtn{background:var(--surface2);border:1px solid var(--line);color:var(--text);cursor:pointer;
+  font:800 11px Inter;letter-spacing:.14em;padding:9px 13px}
+.themebtn:hover{border-color:var(--red)}
+.menubtn{display:none;background:var(--surface2);border:1px solid var(--line);color:var(--text);cursor:pointer;
+  font:800 11px Inter;letter-spacing:.14em;padding:9px 13px}
+.menubtn:hover{border-color:var(--red)}
+.packbtn{background:var(--red);color:#000;border:none;cursor:pointer;font:800 11px Inter;letter-spacing:.14em;padding:10px 16px;display:inline-block}
+.packbtn:hover{background:var(--text)}
+@media(max-width:900px){
+  nav.links{display:none}
+  .menubtn{display:block}
+  nav.links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--bg);border-bottom:1px solid var(--line);padding:8px 22px 16px;gap:0;z-index:310}
+  nav.links.open a{padding:15px 4px;font-size:14px;border-bottom:1px solid var(--line)}
+  nav.links.open a:last-child{border-bottom:none}
+}
+.btn{display:inline-block;font:800 13px Inter;letter-spacing:.16em;padding:15px 30px;cursor:pointer;
+  background:var(--red);color:#000;border:1px solid var(--red);transition:.2s}
+.btn:hover{background:transparent;color:var(--red)}
+.btn.cyan{background:var(--cyan);border-color:var(--cyan)}
+.btn.cyan:hover{background:transparent;color:var(--cyan)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--red);color:var(--red)}
+.btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+main{min-height:70vh}
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;padding:96px 0 84px;border-bottom:1px solid var(--line)}
+.hero-art{position:absolute;top:0;right:0;bottom:0;width:56%;z-index:0;pointer-events:none}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:center;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%),linear-gradient(0deg,transparent 0,#000 26%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 42%);opacity:.5}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(900px 460px at 78% -10%,color-mix(in srgb,var(--red) 16%,transparent),transparent 62%),
+             radial-gradient(700px 380px at 8% 110%,color-mix(in srgb,var(--cyan) 9%,transparent),transparent 60%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .kicker{font:800 12px Inter;letter-spacing:.32em;color:var(--cyan);margin-bottom:16px}
+.hero h1{font-size:clamp(80px,15.5vw,176px);text-shadow:0 10px 44px rgba(0,0,0,.6)}
+.hero h1 span{color:var(--red)}
+.hero .tag{font-family:'Bebas Neue';font-size:clamp(26px,4.4vw,44px);letter-spacing:.06em;color:var(--muted);margin-top:6px}
+.hero .lede{max-width:600px;color:var(--muted);margin-top:18px;font-size:17px}
+.outnow{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:36px;background:color-mix(in srgb,var(--surface) 88%,transparent);
+  border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 20px 14px 14px;max-width:760px;backdrop-filter:blur(6px)}
+.outnow img{width:64px;height:64px;object-fit:cover;flex:none}
+.outnow .t b{font-family:'Bebas Neue';font-size:25px;letter-spacing:.05em;display:block;line-height:1}
+.outnow .t span{font:800 11px Inter;letter-spacing:.24em;color:var(--red)}
+.outnow .acts{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.btn.sm{padding:12px 20px;font-size:12px}
+.halo-chip{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px;max-width:760px;
+  border:1px dashed color-mix(in srgb,var(--cyan) 55%,var(--line));padding:13px 20px}
+.halo-chip .t b{font-family:'Bebas Neue';font-size:22px;letter-spacing:.05em}
+.halo-chip .t span{display:block;font:600 11px Inter;letter-spacing:.18em;color:var(--muted)}
+.count{display:flex;gap:8px;margin-left:auto}
+.count div{background:var(--bg2);border:1px solid var(--line);padding:7px 10px;text-align:center;min-width:56px}
+.count b{display:block;font-family:'Bebas Neue';font-size:24px;color:var(--cyan);line-height:1}
+.count span{font:600 9px Inter;letter-spacing:.2em;color:var(--muted)}
+.stats{display:flex;gap:38px;flex-wrap:wrap;margin-top:42px;padding-top:28px;border-top:1px solid var(--line);max-width:860px}
+.stat b{display:block;font-family:'Bebas Neue';font-size:36px;color:var(--red);letter-spacing:.04em}
+.stat span{font:600 10px Inter;letter-spacing:.22em;color:var(--muted)}
+/* ---------- TICKER ---------- */
+.ticker{overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg2);white-space:nowrap}
+.ticker .run{display:inline-block;padding:11px 0;font:800 12px Inter;letter-spacing:.26em;color:var(--muted);
+  animation:tick 30s linear infinite}
+.ticker .run b{color:var(--text);font-weight:800}
+.ticker .run i{font-style:normal;color:var(--red);padding:0 14px}
+.ticker .run u{text-decoration:none;color:var(--cyan)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ---------- SECTIONS ---------- */
+.sec{padding:80px 0;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sec-head{margin-bottom:38px}
+.sec-kicker{font:800 12px Inter;letter-spacing:.3em;color:var(--red);margin-bottom:10px}
+.sec-kicker.cy{color:var(--cyan)}
+.sec-title{font-size:clamp(44px,6.5vw,74px)}
+.sec-sub{color:var(--muted);max-width:660px;margin-top:10px}
+.flag{display:grid;grid-template-columns:400px 1fr;gap:46px;align-items:start;background:var(--surface);
+  border:1px solid var(--line);padding:40px;box-shadow:var(--shadow)}
+@media(max-width:900px){.flag{grid-template-columns:1fr;padding:26px}}
+.flag h3{font-size:clamp(40px,5vw,60px);margin:10px 0 6px}
+.flag .meta{font:600 12px Inter;letter-spacing:.2em;color:var(--muted);margin-bottom:16px}
+.flag .meta b{color:var(--red)}
+.flag p{color:var(--muted);margin-bottom:20px;max-width:560px}
+.flag .cover{position:relative}
+.flag .cover img{width:100%;aspect-ratio:1;object-fit:cover}
+.flag .cover::after{content:"OUT NOW";position:absolute;top:14px;left:14px;background:var(--red);color:#000;
+  font:800 11px Inter;letter-spacing:.22em;padding:8px 12px}
+.tracklist{list-style:none;margin:0 0 24px;columns:2;column-gap:28px;font-size:14px;color:var(--muted);line-height:2}
+.tracklist li{break-inside:avoid}
+.tracklist li::before{content:"\2014 ";color:var(--red)}
+@media(max-width:600px){.tracklist{columns:1}}
+.pill{display:inline-block;font:800 10px Inter;letter-spacing:.22em;padding:7px 12px;border:1px solid var(--red);color:var(--red)}
+.pill.cy{border-color:var(--cyan);color:var(--cyan)}
+.pill.dim{border-color:var(--line);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid.c2{grid-template-columns:repeat(2,1fr)}
+.grid.c4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.grid,.grid.c4{grid-template-columns:repeat(2,1fr)}.grid.c2{grid-template-columns:1fr}}
+@media(max-width:560px){.grid,.grid.c4{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .22s,border-color .22s;display:block}
+a.card:hover{transform:translateY(-6px);border-color:var(--red)}
+.card .im{aspect-ratio:1;overflow:hidden;background:var(--bg2)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+a.card:hover .im img{transform:scale(1.05)}
+.card .cb{padding:20px}
+.card h3{font-size:29px}
+.card .meta{font:600 11px Inter;letter-spacing:.18em;color:var(--muted);margin:8px 0 10px}
+.card .meta b{color:var(--red)}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tagrow span{font:800 10px Inter;letter-spacing:.16em;border:1px solid var(--line);padding:6px 10px;color:var(--muted)}
+/* product tiles (typographic, no photos needed) */
+.tile{aspect-ratio:1;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#101013 30%,#17171b 70%);color:#f4f1ea}
+.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at 80% 0%,rgba(255,43,43,.22),transparent 65%)}
+.tile.cy::before{background:radial-gradient(420px 200px at 80% 0%,rgba(37,208,232,.20),transparent 65%)}
+.tile .brand{position:absolute;top:16px;left:22px;font:800 10px Inter;letter-spacing:.3em;color:#9a958c}
+.tile .big{font-family:'Bebas Neue';font-size:clamp(34px,3.4vw,46px);line-height:.95;position:relative}
+.tile .sub{font:600 11px Inter;letter-spacing:.2em;color:#c9c4ba;position:relative;margin-top:8px}
+.pack{background:radial-gradient(700px 340px at 50% 0%,color-mix(in srgb,var(--red) 13%,transparent),transparent 65%),
+  radial-gradient(600px 300px at 85% 100%,color-mix(in srgb,var(--cyan) 8%,transparent),transparent 60%),var(--bg2);text-align:center}
+.pack h2{font-size:clamp(46px,7.5vw,80px)}
+.pack h2 span{color:var(--red)}
+.pack p{color:var(--muted);max-width:560px;margin:14px auto 28px}
+.signup{display:flex;max-width:520px;margin:0 auto}
+.signup input{flex:1;background:var(--bg);border:1px solid var(--line);border-right:none;color:var(--text);padding:16px 18px;font-size:14px;min-width:0}
+.signup button{background:var(--red);color:#000;border:none;font:800 12px Inter;letter-spacing:.2em;padding:0 28px;cursor:pointer}
+.signup button:hover{background:var(--text)}
+.confirm{background:var(--surface);border:1px solid var(--red);padding:26px;max-width:520px;margin:0 auto}
+.confirm b{font-family:'Bebas Neue';font-size:30px;letter-spacing:.05em;display:block;margin-bottom:6px}
+.confirm p{font-size:14px;color:var(--muted);margin:0}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:54px 0 40px;margin-top:0}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.flogo{font-family:'Bebas Neue';font-size:28px}
+.flogo em{font-style:normal;color:var(--red)}
+footer p{font-size:12.5px;color:var(--muted);line-height:1.9;max-width:360px;margin-top:10px}
+.fcols{display:flex;gap:44px;flex-wrap:wrap}
+.fcols h5{font:800 11px Inter;letter-spacing:.22em;color:var(--muted);margin-bottom:12px}
+.fcols a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.fcols a:hover{color:var(--red)}
+.copyright{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+body{padding-bottom:76px}
+.player{position:fixed;left:0;right:0;bottom:0;z-index:350;
+  background:color-mix(in srgb,var(--bg) 93%,transparent);backdrop-filter:blur(10px);
+  border-top:1px solid var(--red)}
+.player .wrap{display:flex;align-items:center;gap:14px;padding:10px 22px}
+.pthumb{width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue';font-size:22px;color:var(--red);
+  background:linear-gradient(140deg,var(--surface2),var(--bg2));border:1px solid var(--line)}
+.ptrack{flex:1;min-width:0}
+.ptrack b{display:block;font-size:13px;letter-spacing:.05em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptrack span{font:600 10px Inter;letter-spacing:.18em;color:var(--muted)}
+.pbar{height:4px;background:var(--line);margin-top:8px;cursor:pointer;position:relative}
+.pbar i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--red),#ff7a7a)}
+.pctrl{display:flex;align-items:center;gap:10px;flex:none}
+.pbtn2{width:44px;height:44px;border-radius:50%;background:var(--red);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center}
+.pbtn2 svg{width:16px;height:16px;fill:#000}
+.pbtn2.sm{width:34px;height:34px;background:transparent;border:1px solid var(--line)}
+.pbtn2.sm svg{fill:var(--muted)}
+.ptime{font:600 10px Inter;letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+@media(max-width:640px){.ptime{display:none}.pbtn2.sm{display:none}
+  .hero{padding:64px 0 60px}.hero-art{width:100%;opacity:.55}
+  .outnow .acts{margin-left:0}.count{margin-left:0}
+  .signup{flex-direction:column;gap:10px}.signup input{border-right:1px solid var(--line)}.signup button{padding:16px}
+  .btnrow .btn{flex:1 1 100%;text-align:center}
+  .logo{font-size:25px}.hdr-right{gap:8px}.packbtn{padding:10px 12px}.themebtn,.menubtn{padding:9px 10px}
+  .stats{gap:22px}}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:360;background:var(--surface);
+  border:1px solid var(--red);padding:12px 20px;font:600 12px Inter;letter-spacing:.04em;max-width:92vw;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .3s}
+.toast.show{opacity:1}
+.sec{scroll-margin-top:80px}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../index.html">DUSTIN<em>NOPE</em></a>
+  <nav class="links" id="navlinks"><a href="../index.html" class="active">HOME</a><a href="../music.html">MUSIC</a><a href="../animation.html">ANIMATION</a><a href="../store.html">STORE</a><a href="../about.html">ABOUT</a><a href="../contact.html">CONTACT</a></nav>
+  <div class="hdr-right">
+    <button class="menubtn" id="menubtn" aria-label="Open menu">MENU</button>
+    <button class="themebtn" id="themebtn" aria-label="Toggle light mode">LIGHT</button>
+    <a class="packbtn" href="../pack.html">JOIN THE PACK</a>
+  </div>
+</div></header>
+<main>
+<div class="hero">
+  <div class="hero-art"><img src="../assets/img/no-amen-no-mercy-cover.jpg" alt="" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker">NOPE ENTERTAINMENT // OFFICIAL HUB — LOCKPORT, LOUISIANA</div>
+    <h1>DUSTIN<span>NOPE</span></h1>
+    <div class="tag">Raw Sound. Relentless Art.</div>
+    <p class="lede">Southern gothic gangster rap, independent animation, and unfiltered storytelling — bayou-born and owned outright. No label. No compromise.</p>
+    <div class="outnow">
+      <img src="../assets/img/no-amen-no-mercy-cover.jpg" alt="No Amen, No Mercy album cover">
+      <div class="t"><span>THE NEW ALBUM — OUT NOW</span><b>NO AMEN, NO MERCY</b></div>
+      <div class="acts">
+        <a class="btn sm" href="https://ditto.fm/no-amen-no-mercy">LISTEN NOW</a>
+        <a class="btn sm ghost" href="https://elasticstage.com/dustinnope/releases/no-amen-no-mercy-album">VINYL + CD</a>
+      </div>
+    </div>
+    <div class="halo-chip">
+      <div class="t"><b>HALO OF SMOKE</b><span id="halo-label">NEXT SINGLE — DROPS NOVEMBER 6, 2026</span></div>
+      <div class="count" id="cd"><div><b>--</b><span>DAYS</span></div><div><b>--</b><span>HRS</span></div><div><b>--</b><span>MIN</span></div><div><b>--</b><span>SEC</span></div></div>
+      <a class="btn sm cyan" id="halo-btn" href="https://ditto.fm/halo-of-smoke">PRE-SAVE</a>
+    </div>
+    <div class="stats"><div class="stat"><b>2M+</b><span>LIFETIME STREAMS</span></div><div class="stat"><b>GOLD</b><span>YOUTUBE CREATOR AWARD</span></div><div class="stat"><b>NOMINEE</b><span>TIKTOK RISING STAR</span></div><div class="stat"><b>100%</b><span>INDEPENDENT</span></div></div>
+  </div>
+</div>
+<div class="ticker" aria-hidden="true"><div class="run" id="ticker-run"></div></div>
+<section class="sec"><div class="wrap"><div class="sec-head"><div class="sec-kicker">FLAGSHIP RELEASE</div><h2 class="sec-title">NO AMEN,<br>NO MERCY.</h2><p class="sec-sub">Southern gothic gangster rap. Sin, judgment, mercy — straight out the bayou. Ten tracks, no skips, no apologies.</p></div><div class="flag"><div class="cover"><img src="../assets/img/no-amen-no-mercy-cover.jpg" alt="No Amen, No Mercy album cover"></div><div><span class="pill">EXPLICIT — ALL 10 TRACKS</span><h3>THE ALBUM</h3><div class="meta">NOPE ENTERTAINMENT — <b>OUT NOW</b> — OCTOBER 30, 2026</div><ol class="tracklist"><li>Vanished in the Thin Air</li><li>Rat Trap</li><li>Devil in Pulpit</li><li>Cell Block Lullaby</li><li>Pay The Cost</li><li>Bayou Certified</li><li>I Was Running To Breathe (Remastered)</li><li>Bills Left to Pay</li><li>No Amen, No Mercy</li><li>Mercy for the Broken</li></ol><div class="btnrow"><a class="btn" href="https://ditto.fm/no-amen-no-mercy">LISTEN NOW</a><a class="btn ghost" href="../album-no-amen-no-mercy.html">FULL ALBUM PAGE</a><a class="btn ghost" href="https://elasticstage.com/dustinnope/releases/no-amen-no-mercy-album">VINYL + CD</a></div></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head"><div class="sec-kicker cy">THE SINGLES</div><h2 class="sec-title">FRESH OFF THE PRESS.</h2><p class="sec-sub">One already in the streets, one landing tomorrow.</p></div><div class="grid c2"><div class="card"><div class="cb"><span class="pill">EXPLICIT</span><h3 style="margin-top:10px">HOLY STEPPIN'</h3><div class="meta"><b>OUT NOW</b> — SINGLE — OCTOBER 28, 2026</div><p>His own recording, his own words — church doors, golden light, wolf in the shadows.</p><div class="tagrow"><span>RAP · TRAP · GOSPEL</span></div><div class="btnrow"><a class="btn sm ghost" href="../music.html">HEAR IT ON THE MUSIC PAGE</a></div></div></div><div class="card"><div class="cb"><span class="pill cy">DROPS NOV 6</span><h3 style="margin-top:10px">HALO OF SMOKE</h3><div class="meta"><b>TOMORROW</b> — SINGLE — NOVEMBER 6, 2026</div><p>The voice-note track, finished and polished. His most personal cut this year. Landing on Spotify, YouTube Music and more — not on Apple Music.</p><div class="tagrow"><span>RAP · MELODIC TRAP</span></div><div class="btnrow"><a class="btn sm cyan" href="https://ditto.fm/halo-of-smoke">PRE-SAVE NOW</a></div></div></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head"><div class="sec-kicker">DISCOGRAPHY</div><h2 class="sec-title">THE OUTLAW LEDGER.</h2><p class="sec-sub">Every record cut independent. Every master owned outright.</p></div><div class="grid c4"><a class="card" href="../album-november-17th.html"><div class="im"><img src="../assets/img/november-17th-cover.jpg" alt="NOVEMBER 17TH cover" loading="lazy"></div><div class="cb"><h3>NOVEMBER 17TH</h3><div class="meta">STUDIO ALBUM — APRIL 2026</div><p>18 tracks. The record that started the run — dark Southern storytelling over heavyweight production.</p></div></a><a class="card" href="../album-god-mode.html"><div class="im"><img src="../assets/img/god-mode-cover.jpg" alt="GOD MODE cover" loading="lazy"></div><div class="cb"><h3>GOD MODE</h3><div class="meta">STUDIO ALBUM — 2026</div><p>Full-length statement. Confidence at maximum volume.</p></div></a><a class="card" href="../album-1984.html"><div class="im"><img src="../assets/img/1984-cover.jpg" alt="1984 cover" loading="lazy"></div><div class="cb"><h3>1984</h3><div class="meta">STUDIO ALBUM — 2026</div><p>Named for the year it all started. Grit, memory, and smoke.</p></div></a><a class="card" href="https://ditto.fm/no-amen-no-mercy"><div class="im"><img src="../assets/img/no-amen-no-mercy-cover.jpg" alt="NO AMEN, NO MERCY cover" loading="lazy"></div><div class="cb"><h3>NO AMEN, NO MERCY</h3><div class="meta"><b>OUT NOW</b> — STUDIO ALBUM — 2026</div><p>Ten tracks of Southern gothic gangster rap. The flagship.</p></div></a></div><div class="btnrow"><a class="btn ghost" href="../music.html">FULL DISCOGRAPHY</a></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head"><div class="sec-kicker">ANIMATION STUDIO</div><h2 class="sec-title">BUILT FRAME BY FRAME.</h2><p class="sec-sub">Independent animation, original music videos, and cinematic storytelling crafted without compromise. Explore active studio reels, recent drops, and ongoing projects straight out of the vault.</p></div><div class="grid c2"><a class="card" href="../project-beg-for-it-to-stop.html"><div class="cb"><span class="pill dim">STORYBOARD LOCKED // IN FINAL ANIMATION</span><h3 style="margin-top:10px">BEG FOR IT TO STOP</h3><p>A Southern-noir animated descent — when the noise won't stop, the only way out is through.</p></div></a><a class="card" href="../project-in-the-name-of-the-zone.html"><div class="cb"><span class="pill dim">VISUAL SEQUENCING &amp; SOUND DESIGN</span><h3 style="margin-top:10px">IN THE NAME OF THE ZONE</h3><p>Southern gothic sci-fi built frame by frame — a zone with its own rules, and a name that carries weight.</p></div></a></div><div class="btnrow"><a class="btn ghost" href="../animation.html">ALL PROJECTS</a></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head"><div class="sec-kicker cy">NOPE STORE // THE NEW DROP</div><h2 class="sec-title">WEAR THE PACK.<br>OWN IT ON WAX.</h2><p class="sec-sub">The November drop is live — new designs, new shoes, plus the album on vinyl and CD. Designed in the bayou, shipped worldwide.</p></div><div class="grid c4"><a class="card" href="https://shop.dustinnope.com/products/dustinnope-signature-series-high-tops"><div class="tile"><span class="brand">DUSTINNOPE — SIGNATURE SERIES</span><div class="big">SIGNATURE<br>HIGH-TOPS</div><div class="sub">MEN'S CANVAS — $69.99 — SIZES 5–13</div></div><div class="cb"><h3>SIGNATURE SERIES HIGH-TOPS</h3><div class="meta"><b>NEW</b> — THE DESIGNER SHOE</div><p>Clean black canvas, gold pinstripe, his real signature in gold at the heel and on the tongues.</p></div></a><a class="card" href="https://shop.dustinnope.com/products/halo-of-smoke-smoke-halo-tee"><div class="tile cy"><span class="brand">HALO OF SMOKE</span><div class="big">SMOKE HALO<br>TEE</div><div class="sub">BLACK TEE — $34.99</div></div><div class="cb"><h3>HALO OF SMOKE TEE</h3><div class="meta"><b>NEW</b> — FOR THE NOV 6 DROP</div><p>Smoke-ring halo and gothic lettering on black. Built for the single.</p></div></a><a class="card" href="https://shop.dustinnope.com/products/dustinnope-old-english-tee"><div class="tile"><span class="brand">NOPE ENTERTAINMENT</span><div class="big">OLD ENGLISH<br>TEE</div><div class="sub">BLACK TEE — $34.99</div></div><div class="cb"><h3>DUSTINNOPE OLD ENGLISH TEE</h3><div class="meta"><b>NEW</b> — THE NAME, FRONT AND CENTER</div><p>The wordmark in Old English white on black. Nothing else needed.</p></div></a><a class="card" href="https://elasticstage.com/dustinnope/releases/no-amen-no-mercy-album"><div class="im"><img src="../assets/img/no-amen-no-mercy-cover.jpg" alt="No Amen, No Mercy vinyl LP" loading="lazy"></div><div class="cb"><h3>NO AMEN, NO MERCY — VINYL LP</h3><div class="meta">12-INCH VINYL — $38.90 — MADE TO ORDER</div><p>The full 10-track album on a 12-inch record, cut when you order it. CD also available — $15.90.</p></div></a></div><div class="btnrow"><a class="btn" href="https://shop.dustinnope.com">VISIT THE NOPE STORE</a><a class="btn ghost" href="../store.html">FULL STORE PAGE</a></div></div></section>
+<section class="sec pack"><div class="wrap"><div class="sec-kicker">NEVER MISS A DROP</div><h2>JOIN THE <span>PACK.</span></h2><p>Drop-day alerts, vault openings, merch restocks — straight to your inbox. No spam. No selling your info. Just the music.</p>
+<form class="signup" action="https://app.kit.com/forms/10062554/subscriptions" method="post" target="kitframe" onsubmit="return joinPack(event)">
+  <input type="email" name="email_address" required placeholder="your@email.com" aria-label="Email address">
+  <button type="submit">SIGN UP</button>
+</form><iframe name="kitframe" title="newsletter" style="display:none" aria-hidden="true"></iframe></div></section>
+</main>
+<footer><div class="wrap">
+  <div>
+    <div class="flogo">DUSTIN<em>NOPE</em></div>
+    <p>Nope Entertainment. Southern gothic gangster rap, independent animation, and unfiltered storytelling — out of the Louisiana bayou.<br><br>Every master, every frame, owned outright.</p>
+  </div>
+  <div class="fcols">
+    <div><h5>SITE</h5><a href="../index.html">Home</a><a href="../music.html">Music</a><a href="../animation.html">Animation</a><a href="../store.html">Store</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></div>
+    <div><h5>FOLLOW</h5><a href="https://www.facebook.com/share/19XQVS4r6S/">Facebook</a><a href="https://www.instagram.com/dustinnopemusic/">Instagram</a><a href="https://open.spotify.com/artist/3yR3zVXHBYCdiYMXp6qIj9">Spotify</a><a href="#">YouTube</a><a href="#">TikTok</a></div>
+    <div><h5>PACK</h5><a href="../pack.html">Newsletter</a><a href="../contact.html">Press / Booking</a></div>
+  </div>
+</div>
+<div class="wrap"><div class="copyright"><span>© 2026 Nope Entertainment — Lockport, Louisiana.</span><span>Every master, every frame, owned outright.</span></div></div>
+</footer>
+<div class="player" id="player"><div class="wrap">
+  <div class="pthumb" id="pthumb">D</div>
+  <div class="ptrack"><b id="ptitle">Pick a track — 30-second previews</b><span id="psub">NO AMEN, NO MERCY — OUT NOW</span><div class="pbar" id="pbar"><i id="pfill"></i></div></div>
+  <div class="pctrl">
+    <button class="pbtn2 sm" id="pprev" aria-label="Previous track"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM18 6l-8 6 8 6z"/></svg></button>
+    <button class="pbtn2" id="pplay" aria-label="Play or pause"><svg viewBox="0 0 24 24" id="pplayicon"><path d="M8 5v14l11-7z"/></svg></button>
+    <button class="pbtn2 sm" id="pnext" aria-label="Next track"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 6l8 6-8 6z"/></svg></button>
+  </div>
+  <span class="ptime" id="ptime">0:00 / 0:30</span>
+</div></div>
+<div class="toast" id="toast"></div>
+<script>
+/* mobile menu */
+var mbtn = document.getElementById('menubtn'), mnav = document.getElementById('navlinks');
+mbtn.onclick = function(){ mnav.classList.toggle('open'); };
+mnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mnav.classList.remove('open'); }); });
+/* theme */
+var tbtn = document.getElementById('themebtn');
+tbtn.onclick = function(){
+  var h = document.documentElement;
+  var dark = h.getAttribute('data-theme') !== 'light';
+  h.setAttribute('data-theme', dark ? 'light' : 'dark');
+  tbtn.textContent = dark ? 'DARK' : 'LIGHT';
+};
+/* ticker */
+(function(){
+  var seg = '<b>NO AMEN, NO MERCY</b> — OUT NOW<i>///</i><u>HALO OF SMOKE</u> — DROPS NOV 6<i>///</i><b>2M+</b> LIFETIME STREAMS<i>///</i>THE NOVEMBER MERCH DROP IS LIVE<i>///</i><b>100%</b> INDEPENDENT<i>///</i>';
+  document.getElementById('ticker-run').innerHTML = seg + seg + seg + seg;
+})();
+</script><script>
+/* sticky music player — 30-second previews */
+var TRACKS = [
+  {title:'Bayou Certified', rel:'NO AMEN, NO MERCY — OUT NOW', src:'bayou-certified-preview.mp3'},
+  {title:'No Amen, No Mercy', rel:'NO AMEN, NO MERCY — OUT NOW', src:'no-amen-no-mercy-preview.mp3'}
+];
+var cur = -1;
+var AU = new Audio(); AU.preload = 'none';
+function toast(msg){
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove('show'); }, 3400);
+}
+function fmt(s){ s = Math.max(0, Math.floor(s||0)); return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+function setIcon(playing){
+  document.getElementById('pplayicon').innerHTML = playing
+    ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>'
+    : '<path d="M8 5v14l11-7z"/>';
+}
+function setTrack(i, autoplay){
+  cur = (i + TRACKS.length) % TRACKS.length;
+  var t = TRACKS[cur];
+  document.getElementById('ptitle').textContent = t.title;
+  document.getElementById('psub').textContent = t.rel;
+  document.getElementById('pthumb').textContent = t.title.charAt(0);
+  AU.src = t.src;
+  if(autoplay) playAudio(); else setIcon(false);
+}
+function playAudio(){
+  if(cur < 0) setTrack(0, false);
+  AU.play().then(function(){ setIcon(true); }).catch(function(){
+    setIcon(false);
+    toast('Could not load the preview — check your connection and try again.');
+  });
+}
+(function initPlayer(){
+  document.getElementById('pplay').onclick = function(){ if(AU.paused) playAudio(); else { AU.pause(); setIcon(false); } };
+  document.getElementById('pprev').onclick = function(){ setTrack(cur-1, true); };
+  document.getElementById('pnext').onclick = function(){ setTrack(cur+1, true); };
+  AU.addEventListener('error', function(){ setIcon(false); });
+  AU.addEventListener('ended', function(){ setIcon(false); });
+  AU.addEventListener('timeupdate', function(){
+    var d = AU.duration || 30;
+    document.getElementById('pfill').style.width = (AU.currentTime/d*100)+'%';
+    document.getElementById('ptime').textContent = fmt(AU.currentTime)+' / '+fmt(d);
+  });
+  document.getElementById('pbar').onclick = function(e){
+    if(!AU.src) return;
+    var r = e.currentTarget.getBoundingClientRect(), d = AU.duration || 30;
+    try{ AU.currentTime = ((e.clientX - r.left)/r.width)*d; }catch(_){}
+  };
+  setTrack(0, false);
+})();
+</script><script>
+/* countdown to HALO OF SMOKE — midnight CST, Nov 6 2026; flips to OUT NOW after */
+(function(){
+  var el = document.getElementById('cd'); if(!el) return;
+  var target = new Date('2026-11-06T00:00:00-06:00').getTime();
+  var cells = el.querySelectorAll('b');
+  function pad(n){ return (n<10?'0':'')+n; }
+  (function tick(){
+    var d = target - Date.now();
+    if(d <= 0){
+      cells.forEach(function(c){ c.textContent='00'; });
+      var lbl = document.getElementById('halo-label');
+      if(lbl) lbl.textContent = 'THE NEW SINGLE — OUT NOW';
+      var btn = document.getElementById('halo-btn');
+      if(btn) btn.textContent = 'LISTEN NOW';
+      return;
+    }
+    cells[0].textContent = pad(Math.floor(d/864e5));
+    cells[1].textContent = pad(Math.floor(d/36e5)%24);
+    cells[2].textContent = pad(Math.floor(d/6e4)%60);
+    cells[3].textContent = pad(Math.floor(d/1e3)%60);
+    setTimeout(tick, 1000);
+  })();
+})();
+</script><script>
+function joinPack(e){
+  var f = e.target;
+  setTimeout(function(){
+    f.outerHTML = '<div class="confirm"><b>YOU’RE IN THE PACK.</b><p>Watch your inbox — drop-day alerts, vault openings, merch restocks. No spam, ever.</p></div>';
+  }, 600);
+  return true;
+}
+</script>
+</body>
+</html>
